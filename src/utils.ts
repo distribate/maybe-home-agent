@@ -10,7 +10,6 @@ export async function notify(
 }
 
 export async function gracefulExit(reason: string, code = 0) {
-  console.log(`Процесс завершается: ${reason}`);
   await notify(`Home agent exited: ${reason}`);
   process.exit(code);
 }
